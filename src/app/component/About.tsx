@@ -2,6 +2,8 @@
 
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import Image from 'next/image';
+import AboutImg from '@/app/images/about.webp'
 
 const StatIcon: React.FC<{ type: string; className?: string }> = ({ type, className }) => {
     // Simple SVG icons as replacements
@@ -72,7 +74,7 @@ const About: React.FC = () => {
     ];
 
     return (
-        <section id="about" className="py-20 m-auto bg-white h-screen flex items-center py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 relative overflow-hidden" >
+        <section id="about" className="py-20 m-auto bg-white h-screen flex items-center bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 relative overflow-hidden" >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <div>
@@ -101,8 +103,8 @@ const About: React.FC = () => {
                     </div>
                     <div className="relative">
                         <div className="aspect-w-4 aspect-h-3">
-                            <img
-                                src="https://images.pexels.com/photos/1427107/pexels-photo-1427107.jpeg?auto=compress&cs=tinysrgb&w=800"
+                            <Image
+                                src={AboutImg}
                                 alt="Logistics operations"
                                 className="rounded-lg shadow-lg object-cover w-full h-96"
                             />

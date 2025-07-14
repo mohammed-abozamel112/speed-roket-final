@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
+import Image from "next/image";
+
 
 // Replace lucide-react icons with simple SVGs or placeholders
 const PlaneIcon = () => (
@@ -520,7 +522,7 @@ const Services: React.FC = () => {
                       {service.title}
                     </h3>
                   </div>
-                  <img
+                  <Image
                     src={service.image}
                     alt={service.title}
                     className="rounded-lg mb-4 w-full object-cover max-h-64"
