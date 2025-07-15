@@ -74,9 +74,9 @@ const About: React.FC = () => {
     ];
 
     return (
-        <section id="about" className="py-20 m-auto bg-white h-screen flex items-center bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 relative overflow-hidden" >
+        <section id="about" className="py-20 m-auto bg-white min-h-screen flex items-center bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 relative" >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
                     <div>
                         <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                             {t('aboutTitle')}
@@ -106,10 +106,10 @@ const About: React.FC = () => {
                             <Image
                                 src={AboutImg}
                                 alt="Logistics operations"
-                                className="rounded-lg shadow-lg object-cover w-full h-96"
+                                className="rounded-lg shadow-lg object-cover w-full max-h-[400px] md:max-h-[480px]"
                             />
                         </div>
-                        <div className="absolute -bottom-6 -left-6 bg-blue-600 text-white p-6 rounded-lg shadow-lg">
+                        <div className="absolute bottom-0 left-0 md:-bottom-6 md:-left-6 bg-blue-600 text-white p-4 md:p-6 rounded-lg shadow-lg">
                             <div className="text-2xl font-bold">24/7</div>
                             <div className="text-sm">{isRTL ? 'دعم فني' : 'Customer Support'}</div>
                         </div>

@@ -64,7 +64,7 @@ const IconClock = () => (
 );
 
 const Contact: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, isRTL } = useLanguage();
 
   const contactInfo = [
     {
@@ -96,7 +96,7 @@ const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="py-20 m-auto bg-white h-screen flex items-center bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 relative overflow-hidden"
+      className="py-20 m-auto bg-white h-auto flex items-center bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
@@ -138,7 +138,11 @@ const Contact: React.FC = () => {
               <h3 className="text-2xl font-bold mb-6">{t("WhyUs")}</h3>
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div
+                    className={`w-2 h-2 bg-orange-400 rounded-full mt-2 mr-3 flex-shrink-0 ${
+                      isRTL ? "ml-2" : "mr-2"
+                    }`}
+                  ></div>
                   <div>
                     <h4 className="font-semibold mb-1">{t("GlobalNetWork")}</h4>
                     <p className="text-blue-100 text-sm">
@@ -147,7 +151,9 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div className={`w-2 h-2 bg-orange-400 rounded-full mt-2 mr-3 flex-shrink-0 ${
+                      isRTL ? "ml-2" : "mr-2"
+                    }`}></div>
                   <div>
                     <h4 className="font-semibold mb-1">
                       {t("RealTimeTracking")}
@@ -158,7 +164,9 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div className={`w-2 h-2 bg-orange-400 rounded-full mt-2 mr-3 flex-shrink-0 ${
+                      isRTL ? "ml-2" : "mr-2"
+                    }`}></div>
                   <div>
                     <h4 className="font-semibold mb-1">
                       {t("CompetitiveRates")}
@@ -167,7 +175,9 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div className={`w-2 h-2 bg-orange-400 rounded-full mt-2 mr-3 flex-shrink-0 ${
+                      isRTL ? "ml-2" : "mr-2"
+                    }`}></div>
                   <div>
                     <h4 className="font-semibold mb-1">{t("ExpertSupport")}</h4>
                     <p className="text-blue-100 text-sm">

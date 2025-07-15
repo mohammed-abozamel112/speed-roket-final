@@ -525,7 +525,9 @@ const Services: React.FC = () => {
                   <Image
                     src={service.image}
                     alt={service.title}
-                    className="rounded-lg mb-4 w-full object-cover max-h-64"
+                    width={800}
+                    height={800}
+                    className="rounded-lg mb-4 w-full h-auto object-cover max-h-64"
                   />
                   <p className="text-gray-300 mb-4">{service.description}</p>
                   <div className="flex items-center mb-4">
