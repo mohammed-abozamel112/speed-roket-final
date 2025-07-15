@@ -347,7 +347,9 @@ const Services: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <div className="inline-flex items-center mb-6 px-4 py-2 bg-white/5 backdrop-blur-md rounded-full">
-            <div className="w-2 h-2 bg-blue-400 rounded-full mr-3 animate-pulse"></div>
+            <div className={`w-2 h-2 bg-blue-400 rounded-full mr-3 animate-pulse  ${
+                      isRTL ? "ml-2" : "mr-2"
+                    }`}></div>
             <span className="text-sm font-medium text-blue-300">
               {t("servicesTitle")}
             </span>
