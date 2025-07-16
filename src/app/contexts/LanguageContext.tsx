@@ -92,17 +92,20 @@ const translations = {
     decorationDesc: "Source all interior/exterior finishes from China",
     decorationDesc2:
       "Flooring, lighting, ceramics, facades, paints – modern decor pieces & unique designs",
-    decorationImage: "https://cdn.pixabay.com/photo/2024/12/24/10/04/kitchen-9288111_1280.jpg",
+    decorationImage:
+      "https://cdn.pixabay.com/photo/2024/12/24/10/04/kitchen-9288111_1280.jpg",
     furniture: "Custom Furniture Import",
     furnitureDesc: "Choose furniture tailored to your taste & budget",
     furnitureDesc2:
       "Home, office, and hotel furniture – custom designs, premium materials, high-quality craftsmanship",
-    furnitureImage: "https://cdn.pixabay.com/photo/2019/03/08/20/17/kitchen-4043098_1280.jpg",
+    furnitureImage:
+      "https://cdn.pixabay.com/photo/2019/03/08/20/17/kitchen-4043098_1280.jpg",
     accessories: "Cars & Auto Parts",
     accessoriesDesc: "Import new or used vehicles from China",
     accessoriesDesc2:
       "Genuine spare parts & car accessories with quality assurance",
-    accessoriesImage: "https://cdn.pixabay.com/photo/2016/05/06/16/32/car-1376190_1280.jpg",
+    accessoriesImage:
+      "https://cdn.pixabay.com/photo/2016/05/06/16/32/car-1376190_1280.jpg",
 
     // About
     aboutTitle: "About Us",
@@ -245,20 +248,20 @@ const translations = {
     decorationDesc2:
       "الأرضيات، الإضاءة، السيراميك، الواجهات، والدهانات - قطع الديكور العصرية والتصاميم الفريدة",
     decorationImage:
-      "https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "https://cdn.pixabay.com/photo/2024/12/24/10/04/kitchen-9288111_1280.jpg",
     /*furniture */
     furniture: "الأثاث",
     furnitureDesc: "اختر أثاثك حسب ذوقك وميزانيتك",
     furnitureDesc2:
       "أثاث منزلي، مكتبي، فندقي تصميمات مخصصة، تنوع في المواد، جودة تصنيع عالية",
     furnitureImage:
-      "https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "https://cdn.pixabay.com/photo/2019/03/08/20/17/kitchen-4043098_1280.jpg",
     /* Cars and accessories*/
     accessories: " السيارات وملحقاتها",
     accessoriesDesc: "استيراد سيارات جديدة أو مستعملة",
     accessoriesDesc2: "قطع غيار أصلية واكسسوارات السيارات بجودة مضمونة",
     accessoriesImage:
-      "https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "https://cdn.pixabay.com/photo/2016/05/06/16/32/car-1376190_1280.jpg",
 
     // About
     aboutTitle: "من نحن",
