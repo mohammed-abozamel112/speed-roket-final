@@ -96,7 +96,7 @@ const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="py-20 m-auto bg-white h-auto flex items-center bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 relative overflow-hidden"
+      className="py-20 m-auto bg-white h-auto flex items-center w-full bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">

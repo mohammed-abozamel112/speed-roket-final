@@ -108,7 +108,7 @@ const About: React.FC = () => {
   return (
     <section
       id="about"
-      className="py-20 m-auto min-h-screen flex items-center relative"
+      className="py-20 m-auto min-h-screen flex items-center w-full relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-center">

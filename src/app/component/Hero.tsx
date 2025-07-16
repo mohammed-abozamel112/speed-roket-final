@@ -71,7 +71,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900"
+      className="relative min-h-screen w-full flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900"
     >
       {/* Particles Background */}
       <div className="absolute inset-0 z-0 opacity-20">

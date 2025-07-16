@@ -324,7 +324,7 @@ const Services: React.FC = () => {
   return (
     <section
       id="services"
-      className="py-20 relative"
+      className="py-20 w-full relative overflow-hidden"
     >
       {/* Background Effects */}
       <div className="absolute inset-0">
