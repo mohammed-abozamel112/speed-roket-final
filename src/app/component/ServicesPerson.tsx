@@ -3,38 +3,7 @@
 import React, { useState } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 import Image from "next/image";
-import ServicesPerson from "./ServicesPerson";
-// Replace lucide-react icons with simple SVGs or placeholders
-const PlaneIcon = () => (
-  <svg
-    className="h-8 w-8 text-white"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-  >
-    <path
-      d="M2 16l20-5-20-5v4l15 1-15 1v4z"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
-const ShipIcon = () => (
-  <svg
-    className="h-8 w-8 text-white"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-  >
-    <path
-      d="M3 20l9-16 9 16H3z"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
+
 const TruckIcon = () => (
   <svg
     className="h-8 w-8 text-white"
@@ -101,53 +70,6 @@ const WarehouseIcon = () => (
     />
   </svg>
 );
-const FileTextIcon = () => (
-  <svg
-    className="h-8 w-8 text-white"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-  >
-    <rect
-      x="4"
-      y="4"
-      width="16"
-      height="16"
-      rx="2"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <line
-      x1="8"
-      y1="8"
-      x2="16"
-      y2="8"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <line
-      x1="8"
-      y1="12"
-      x2="16"
-      y2="12"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <line
-      x1="8"
-      y1="16"
-      x2="12"
-      y2="16"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
-
 const PhoneIcon: React.FC<{ className?: string }> = ({ className }) => (
   <svg
     className={className}
@@ -212,20 +134,16 @@ const UsersIcon: React.FC<{ className?: string }> = ({ className }) => (
   </svg>
 );
 
-const Services: React.FC = () => {
+const ServicesPerson: React.FC = () => {
   const { t, isRTL } = useLanguage();
 
-  const services = [
+  const ServicesPersons = [
     {
-      icon: PlaneIcon,
-      title: t("Consultations"),
-      description: t("ConsultationsDesc"),
-      ConsultationsModelDesc: t("ConsultationsModelDesc"),
-      ConsultationsModelDesc1: t("ConsultationsModelDesc1"),
-      ConsultationsModelDesc2: t("ConsultationsModelDesc2"),
-      ConsultationsModelDesc3: t("ConsultationsModelDesc3"),
-      image:
-        "https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=800",
+      icon: WarehouseIcon,
+      title: t("decoration"),
+      description: t("decorationDesc"),
+      decorationDesc2: t("decorationDesc2"),
+      image: t("decorationImage"),
       rating: 4.8,
       reviews: "2.1K",
       status: isRTL ? "متاح" : "Available",
@@ -233,18 +151,11 @@ const Services: React.FC = () => {
       gradient: "from-blue-600/20 to-cyan-600/20",
     },
     {
-      icon: ShipIcon,
-      title: t("Export"),
-      description: t("ExportDesc"),
-      ExportModelDesc: t("ExportModelDesc"),
-      ExportModelDesc1: t("ExportModelDesc1"),
-      ExportModelDesc2: t("ExportModelDesc2"),
-      ExportModelDesc3: t("ExportModelDesc3"),
-      ExportModelDesc4: t("ExportModelDesc4"),
-      ExportModelDesc5: t("ExportModelDesc5"),
-      ExportModelDesc6: t("ExportModelDesc6"),
-      image:
-        "https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=800",
+      icon: WarehouseIcon,
+      title: t("furniture"),
+      description: t("furnitureDesc"),
+      furnitureDesc2: t("furnitureDesc2"),
+      image: t("furnitureImage"),
       rating: 4.9,
       reviews: "3.2K",
       status: isRTL ? "متاح" : "Available",
@@ -253,53 +164,16 @@ const Services: React.FC = () => {
     },
     {
       icon: TruckIcon,
-      title: t("Shipping"),
-      description: t("ShippingDesc"),
-      ShippingModelDesc: t("ShippingModelDesc"),
-      ShippingModelDesc1: t("ShippingModelDesc1"),
-      ShippingModelDesc2: t("ShippingModelDesc2"),
-      ShippingModelDesc3: t("ShippingModelDesc3"),
-      ShippingModelDesc4: t("ShippingModelDesc4"),
-      ShippingModelDesc5: t("ShippingModelDesc5"),
-      ShippingModelDesc6: t("ShippingModelDesc6"),
-      image:
-        "https://images.pexels.com/photos/1427107/pexels-photo-1427107.jpeg?auto=compress&cs=tinysrgb&w=800",
+      title: t("accessories"),
+      description: t("accessoriesDesc"),
+      accessoriesDesc2: t("accessoriesDesc2"),
+      image: t("accessoriesImage"),
       rating: 4.7,
       reviews: "1.8K",
       status: isRTL ? "متاح" : "Available",
       statusColor: "bg-green-500",
       gradient: "from-green-600/20 to-emerald-600/20",
     },
-    {
-      icon: WarehouseIcon,
-      title: t("AirFreight"),
-      description: t("warehousingDesc"),
-      AirFreightModelDesc: t("AirFreightModelDesc"),
-      image:
-        "https://images.pexels.com/photos/4481259/pexels-photo-4481259.jpeg?auto=compress&cs=tinysrgb&w=800",
-      rating: 4.6,
-      reviews: "1.5K",
-      status: isRTL ? "متاح" : "Available",
-      statusColor: "bg-green-500",
-      gradient: "from-purple-600/20 to-pink-600/20",
-    },
-    {
-      icon: FileTextIcon,
-      title: t("customsClearance"),
-      description: t("customsClearanceDesc"),
-      customsClearanceModelDesc: t("customsClearanceModelDesc"),
-      customsClearanceModelDesc1: t("customsClearanceModelDesc1"),
-      customsClearanceModelDesc2: t("customsClearanceModelDesc2"),
-      customsClearanceModelDesc3: t("customsClearanceModelDesc3"),
-      customsClearanceModelDesc4: t("customsClearanceModelDesc4"),
-      image:
-        "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800",
-      rating: 4.8,
-      reviews: "2.3K",
-      status: isRTL ? "متاح" : "Available",
-      statusColor: "bg-green-500",
-      gradient: "from-orange-600/20 to-red-600/20",
-    }
   ];
 
   const [selectedServiceIndex, setSelectedServiceIndex] = useState<
@@ -322,10 +196,7 @@ const Services: React.FC = () => {
   };
 
   return (
-    <section
-      id="services"
-      className="py-20 relative"
-    >
+    <>
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full filter blur-3xl animate-pulse"></div>
@@ -335,16 +206,7 @@ const Services: React.FC = () => {
         ></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            <span className="block">{t("servicesTitle")}</span>
-          </h2>
-
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            {t("servicesSubtitle")}
-          </p>
-        </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mt-8">
         <div className="text-center mb-16">
           <div className="inline-flex items-center mb-6 px-4 py-2 bg-white/5 backdrop-blur-md rounded-full">
             <div
@@ -353,24 +215,24 @@ const Services: React.FC = () => {
               }`}
             ></div>
             <span className="text-sm font-medium text-blue-300">
-              {t("companyServiceTitle")}
+              {t("ServiceForPerson")}
             </span>
           </div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            <span className="block">{t("companyServiceTitle")}</span>
+            <span className="block">{t("ServiceForPerson")}</span>
           </h2>
 
           <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            {t("companyServiceSubTitle")}
+            {t("ServiceForPersonSubTitle")}
           </p>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            {t("companyServiceDescription")}
+            {t("ServiceForPersonDescription")}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => {
+          {ServicesPersons.map((service, index) => {
             const IconComponent = service.icon;
             return (
               <div key={index} className="group relative">
@@ -514,7 +376,7 @@ const Services: React.FC = () => {
               &times;
             </button>
             {(() => {
-              const service = services[selectedServiceIndex];
+              const service = ServicesPersons[selectedServiceIndex];
               const IconComponent = service.icon;
               return (
                 <>
@@ -534,85 +396,7 @@ const Services: React.FC = () => {
                     className="rounded-lg mb-4 w-full h-auto object-cover max-h-64"
                   />
                   <p className="text-gray-300 mb-4">{service.description}</p>
-                  {/* Render additional modal description fields */}
-                  <ul className="list-disc list-inside text-gray-300 mb-4 space-y-1">
-                    {service.ConsultationsModelDesc && (
-                      <li>{service.ConsultationsModelDesc}</li>
-                    )}
-                    {service.ConsultationsModelDesc1 && (
-                      <li>{service.ConsultationsModelDesc1}</li>
-                    )}
-                    {service.ConsultationsModelDesc2 && (
-                      <li>{service.ConsultationsModelDesc2}</li>
-                    )}
-                    {service.ConsultationsModelDesc3 && (
-                      <li>{service.ConsultationsModelDesc3}</li>
-                    )}
 
-                    {service.ExportModelDesc && (
-                      <li>{service.ExportModelDesc}</li>
-                    )}
-                    {service.ExportModelDesc1 && (
-                      <li>{service.ExportModelDesc1}</li>
-                    )}
-                    {service.ExportModelDesc2 && (
-                      <li>{service.ExportModelDesc2}</li>
-                    )}
-                    {service.ExportModelDesc3 && (
-                      <li>{service.ExportModelDesc3}</li>
-                    )}
-                    {service.ExportModelDesc4 && (
-                      <li>{service.ExportModelDesc4}</li>
-                    )}
-                    {service.ExportModelDesc5 && (
-                      <li>{service.ExportModelDesc5}</li>
-                    )}
-                    {service.ExportModelDesc6 && (
-                      <li>{service.ExportModelDesc6}</li>
-                    )}
-
-                    {service.ShippingModelDesc && (
-                      <li>{service.ShippingModelDesc}</li>
-                    )}
-                    {service.ShippingModelDesc1 && (
-                      <li>{service.ShippingModelDesc1}</li>
-                    )}
-                    {service.ShippingModelDesc2 && (
-                      <li>{service.ShippingModelDesc2}</li>
-                    )}
-                    {service.ShippingModelDesc3 && (
-                      <li>{service.ShippingModelDesc3}</li>
-                    )}
-                    {service.ShippingModelDesc4 && (
-                      <li>{service.ShippingModelDesc4}</li>
-                    )}
-                    {service.ShippingModelDesc5 && (
-                      <li>{service.ShippingModelDesc5}</li>
-                    )}
-                    {service.ShippingModelDesc6 && (
-                      <li>{service.ShippingModelDesc6}</li>
-                    )}
-
-                    {service.AirFreightModelDesc && (
-                      <li>{service.AirFreightModelDesc}</li>
-                    )}
-
-                    {service.customsClearanceModelDesc && (
-                      <li>{service.customsClearanceModelDesc}</li>
-                    )}
-                    {service.customsClearanceModelDesc1 && (
-                      <li>{service.customsClearanceModelDesc1}</li>
-                    )}
-                    {service.customsClearanceModelDesc2 && (
-                      <li>{service.customsClearanceModelDesc2}</li>
-                    )}
-                    {service.customsClearanceModelDesc3 && (
-                      <li>{service.customsClearanceModelDesc3}</li>
-                    )}
-                    {service.customsClearanceModelDesc4 && (
-                      <li>{service.customsClearanceModelDesc4}</li>
-                    )}
-                  </ul>
                   <div className="flex items-center mb-4">
                     <span className="text-white font-semibold mr-2">
                       {service.rating}
@@ -644,9 +428,8 @@ const Services: React.FC = () => {
           </div>
         </div>
       )}
-      <ServicesPerson/>
-    </section>
+    </>
   );
 };
 
-export default Services;
+export default ServicesPerson;

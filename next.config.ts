@@ -3,7 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['images.pexels.com'],
+    domains: ['images.pexels.com','images.pixabay.com'],
+    
   },
 };
 
