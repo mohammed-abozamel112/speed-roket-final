@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       <body
-        className={`bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 overflow-x-hidden relative ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ClientProvider>
           {children}
